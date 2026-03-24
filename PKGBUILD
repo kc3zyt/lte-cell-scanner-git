@@ -34,6 +34,7 @@ build() {
 		-DCMAKE_VERBOSE_MAKEFILE=ON \
 		-DUSE_HACKRF=1 \
 		-DUSE_BLADERF=1 \
+		-DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
 		-DUSE_OPENCL=0 # opencl segfaults in some cases
 	make
 }
