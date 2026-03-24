@@ -9,7 +9,7 @@ url="https://github.com/JiaoXianjun/LTE-Cell-Scanner"
 license=('GPL')
 depends=('git')
 #makedepends=('cmake' 'hackrf' 'fftw' 'itpp' 'boost' 'boost-libs' 'libbladerf-git')
-makedepends=('cmake' 'fftw' 'itpp' 'boost' 'boost-libs')
+makedepends=('cmake' 'fftw' 'itpp' 'boost' 'boost-libs' 'rtl-sdr')
 source=("${pkgname}::git+https://github.com/JiaoXianjun/LTE-Cell-Scanner")
 sha256sums=('SKIP')
 
