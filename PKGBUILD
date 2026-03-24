@@ -8,7 +8,8 @@ arch=('i686' 'x86_64')
 url="https://github.com/JiaoXianjun/LTE-Cell-Scanner"
 license=('GPL')
 depends=('git')
-makedepends=('cmake' 'hackrf' 'fftw' 'itpp' 'boost' 'boost-libs' 'libbladerf-git')
+#makedepends=('cmake' 'hackrf' 'fftw' 'itpp' 'boost' 'boost-libs' 'libbladerf-git')
+makedepends=('cmake' 'fftw' 'itpp' 'boost' 'boost-libs')
 source=("${pkgname}::git+https://github.com/JiaoXianjun/LTE-Cell-Scanner")
 sha256sums=('SKIP')
 
