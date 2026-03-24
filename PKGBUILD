@@ -21,7 +21,7 @@ pkgver() {
 
 prepare() {
 	cd "${srcdir}/${pkgname}"
-
+	sed -i 's/FIND_PACKAGE( Boost COMPONENTS thread system REQUIRED )/FIND_PACKAGE( Boost COMPONENTS thread  REQUIRED )' CMakeLists.txt
 	mkdir -p "${srcdir}/${pkgname}/build"
 }
 
