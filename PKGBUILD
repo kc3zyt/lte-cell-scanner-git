@@ -8,7 +8,7 @@ arch=('i686' 'x86_64')
 url="https://github.com/JiaoXianjun/LTE-Cell-Scanner"
 license=('GPL')
 depends=('git')
-makedepends=('cmake' 'hackrf' 'fftw' 'itpp' 'boost' 'boost-libs' 'libbladerf-git' 'rtl-sdr')
+makedepends=('cmake' 'hackrf' 'fftw' 'itpp' 'boost' 'boost-libs' 'bladerf' 'rtl-sdr')
 source=("${pkgname}::git+https://github.com/JiaoXianjun/LTE-Cell-Scanner")
 sha256sums=('SKIP')
 
@@ -20,7 +20,7 @@ pkgver() {
 
 prepare() {
 	cd "${srcdir}/${pkgname}"
-	sed -i 's/ system//' CMakeLists.txt
+	sed -i 's/FIND_PACKAGE( Boost COMPONENTS thread system REQUIRED )/FIND_PACKAGE( Boost COMPONENTS thread REQUIRED )/' CMakeLists.txt
 	mkdir -p "${srcdir}/${pkgname}/build"
 }
 
